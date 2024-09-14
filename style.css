@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --cor-01: rgb(51, 0, 75);
+    --cor-02: rgb(109, 32, 143);
+    --cor-03: rgb(250, 208, 146);
+    --cor-04: rgb(151, 151, 151);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        var(--cor-01) 0%,
+        var(--cor-02) 100%);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    padding: 30px 40px;
+}
+
+.container-nova-tarefa {
+    font-family: "SUSE", sans-serif;
+    display: flex;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+.input-nova-tarefa {
+    flex: 3;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid var(--cor-04);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.input-nova-tarefa:focus {
+    outline: none;
+    border: 2px solid var(--cor-03);
+}
+
+.button-nova-tarefa {
+    flex: 1;
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    font-size: 1rem;
+    color: var(--cor-01);
+    background-color: var(--cor-03);
+    cursor: pointer;
+}
+
+.container-lista-vazia {
+    color: var(--cor-04);
+    margin-top: 45px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.container-lista-tarefas {
+    margin-top: 45px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    /*width: 100%;*/
+}
+
+.tarefa {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: var(--cor-01);
+    cursor: pointer;
+}
+
+.concluido {
+    text-decoration: line-through;
+    color: var(--cor-04);
+}
+
+.ocultar {
+    display: none;
+}
