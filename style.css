@@ -3,7 +3,7 @@
 :root {
     --cor-01: rgb(51, 0, 75);
     --cor-02: rgb(109, 32, 143);
-    --cor-03: rgb(250, 208, 146);
+    --cor-03: rgb(255, 194, 103);
     --cor-04: rgb(151, 151, 151);
 }
 
@@ -27,6 +27,12 @@ body {
 
 .container {
     padding: 30px 40px;
+}
+
+h1 {
+    color: var(--cor-03);
+    text-align: center;
+    padding: 10px;
 }
 
 .container-nova-tarefa {
@@ -85,6 +91,10 @@ body {
     padding: 5px;
     color: var(--cor-01);
     cursor: pointer;
+}
+
+.bi-trash3-fill:hover {
+    color: var(--cor-03);
 }
 
 .concluido {
