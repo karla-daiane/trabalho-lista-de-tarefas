@@ -14,33 +14,38 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(
         90deg,
-        var(--cor-01) 0%,
-        var(--cor-02) 100%);
+        var(--cor-01),
+        var(--cor-02));
+    animation: gradiente 20s ease infinite;
+    background-size: 150% 150%;
     font-family: "Poppins", sans-serif;
 }
 
 .container {
+    max-width: 60%;
+    height: 100%;
     padding: 30px 40px;
 }
 
 h1 {
-    color: var(--cor-03);
     text-align: center;
-    padding: 10px;
+    padding-bottom: 30px;
+    font-family: "SUSE", sans-serif;
+    color: var(--cor-03);
 }
 
 .container-nova-tarefa {
-    font-family: "SUSE", sans-serif;
     display: flex;
-    background-color: #fff;
     padding: 30px 20px;
     border-radius: 15px;
+    font-family: "SUSE", sans-serif;
+    background-color: #fff;
 }
 
 .input-nova-tarefa {
@@ -66,7 +71,13 @@ h1 {
     font-size: 1rem;
     color: var(--cor-01);
     background-color: var(--cor-03);
+    box-shadow: 2px 2px 3px rgb(148, 148, 148);
     cursor: pointer;
+}
+
+.button-nova-tarefa:hover {
+    color: var(--cor-01);
+    filter: brightness(1.1);
 }
 
 .container-lista-vazia {
@@ -78,11 +89,13 @@ h1 {
 }
 
 .container-lista-tarefas {
-    margin-top: 45px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10%;
     background-color: #fff;
-    padding: 30px 20px;
+    padding: 20px;
     border-radius: 10px;
-    /*width: 100%;*/
+    width: 100%;
 }
 
 .tarefa {
@@ -91,6 +104,15 @@ h1 {
     padding: 5px;
     color: var(--cor-01);
     cursor: pointer;
+}
+
+.tarefa p {
+    width: 90%;
+    word-wrap: break-word ;
+}
+
+.tarefa:hover {
+    color: var(--cor-02);
 }
 
 .bi-trash3-fill:hover {
@@ -104,4 +126,43 @@ h1 {
 
 .ocultar {
     display: none;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 95%;
+        padding: 15px 0px;
+    }
+
+    .container-nova-tarefa {
+        min-width: max-content;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-nova-tarefa {
+        width: 95%;
+    }
+
+    .button-nova-tarefa {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+
+    .container-lista-tarefas {
+        min-width: 250px;
+    }
 }
